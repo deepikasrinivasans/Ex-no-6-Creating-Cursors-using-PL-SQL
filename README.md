@@ -47,7 +47,7 @@ SQL> declare
  22  /
 ```
 ## Output:
-![cust01](https://github.com/deepikasrinivasans/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/119393935/dd3a1d42-6878-4056-b829-5be4e40b08ed)
+![cust01](https://github.com/deepikasrinivasans/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/119393935/2ae8bd46-9890-45a7-942d-cc6470abee42)
 ![cust2](https://github.com/deepikasrinivasans/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/119393935/1165090b-504b-4fbb-a8e7-ccbffdf18b6b)
 ## Result:
 Thus a cursor is created using PL/SQL successfully.
