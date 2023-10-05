@@ -11,62 +11,43 @@
 ## Program:
 
 ### Create employee table
-
-create table employee1(empid NUMBER, empname VARCHAR(10), dept VARCHAR(10),salary NUMBER);
-
+```
+CREATE TABLE customers (Cust_id number,Cust_name varchar(20),Cust_addr varchar(20),mobile number);
+```
+## Inserting the values:
+```
+insert into account values(123,'Deepika','New York',9876543210);
+insert into account values(456,'Srinivasan','Cairo',8908843210);
+insert into account values(789,'Kalyani','California',7894021980);
+```
 ### PLSQL Cursor code
 ```
-set serveroutput on;
-
-declare
-
-cursor employee_cursor is
-
-select EMPID,EMPNAME,DEPT,SALARY
-
-from employee1;
-
-emp_id number;
-
-emp_name varchar(50);
-
-emp_dept varchar(50);
-
-emp_salary number;
-
-begin
-
-open employee_cursor;
-
-loop
-
-fetch employee_cursor into emp_id,emp_name,emp_dept,emp_salary;
-
-exit when employee_cursor%NOTFOUND;
-
-dbms_output.put_line('EMPLOYEE ID: ' || emp_id);
-
-dbms_output.put_line('EMPLOYEE NAME: ' || emp_name);
-
-dbms_output.put_line('DEPARTMENT: ' || emp_dept);
-
-dbms_output.put_line('SALARY ' || emp_salary);
-
-dbms_output.put_line('----------------------');
-
-END LOOP;
-
-close employee_cursor;
-
-end;
-
-/
+SQL> set serveroutput on
+SQL> declare
+  2        cursor New_Cursor is
+  3        select accno, customer_name,city,contact
+  4        from account;
+  5        accno number;
+  6        customer_name varchar(90);
+  7        city varchar(90);
+  8        contact number;
+  9        landline number;
+ 10        begin
+ 11        open New_Cursor;
+ 12        loop
+ 13        fetch New_Cursor into accno,customer_name,city,contact;
+ 14        exit when New_Cursor%notfound;
+ 15        dbms_output.put_line('Account Number: '||accno);
+ 16        dbms_output.put_line('Customer Name: '||customer_name);
+ 17        dbms_output.put_line('Address: '||city);
+ 18        dbms_output.put_line('Contact Number: '||contact);
+ 19        end loop;
+ 20        close New_cursor;
+ 21        end;
+ 22  /
 ```
 ## Output:
-![image](https://github.com/Anandanaruvi/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/120443233/6a35e7b4-c474-4350-982d-7eb5674dee59)
-
-
-![image](https://github.com/Anandanaruvi/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/120443233/deef7296-a8a6-40c2-8347-75f7a9d41d64)
-
+![cust01](https://github.com/deepikasrinivasans/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/119393935/dd3a1d42-6878-4056-b829-5be4e40b08ed)
+![cust2](https://github.com/deepikasrinivasans/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/119393935/1165090b-504b-4fbb-a8e7-ccbffdf18b6b)
 ## Result:
 Thus a cursor is created using PL/SQL successfully.
