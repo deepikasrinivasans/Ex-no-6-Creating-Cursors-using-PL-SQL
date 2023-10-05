@@ -9,7 +9,6 @@
 4. Close the cursor
 
 ## Program:
-
 ### Create employee table
 ```
 CREATE TABLE customers (Cust_id number,Cust_name varchar(20),Cust_addr varchar(20),mobile number);
